@@ -1,0 +1,12 @@
+<aside class="w-[245px] h-screen bg-white shadow-md rounded-tr-[15px] rounded-br-[15px] flex flex-col items-center">
+  <div class="w-10 h-10 my-7">Logo</div>
+  <ul class="px-[27.5px] flex flex-col gap-y-4">
+    <li><%- include('../partials/menu-item', {title: 'Home', icon: include('../../icons/home.ejs')}) %></li>
+    <li><%- include('../partials/menu-item', {title: 'Favorite', icon: include('../../icons/heart.ejs')}) %></li>
+    <li><%- include('../partials/menu-item', {title: 'Message', icon: include('../../icons/message.ejs')}) %></li>
+    <li>
+      <%- include('../partials/menu-item', {title: 'Notifications', icon: include('../../icons/notification.ejs')}) %>
+    </li>
+    <li><%- include('../partials/menu-item', {title: 'Setting', icon: include('../../icons/settings.ejs')}) %></li>
+  </ul>
+</aside>
