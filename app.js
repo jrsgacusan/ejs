@@ -5,7 +5,10 @@ const app = express()
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
-  res.render('index')
+  const viewsData = {
+    items: items,
+  }
+  res.render('index', viewsData)
 })
 
 app.listen(3000, () => {
@@ -14,6 +17,7 @@ app.listen(3000, () => {
 
 const browserSync = require('browser-sync').create()
 const bsConfig = require('./bs-config.js')
+const { items } = require('./constants/items.js')
 browserSync.init(bsConfig)
 app.use(require('connect-browser-sync')(browserSync))
 
