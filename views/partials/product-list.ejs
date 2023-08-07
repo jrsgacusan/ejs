@@ -651,83 +651,9 @@
                     Sizes
                   </legend>
                   <div class="space-y-3 pt-6">
-                    <div class="flex items-center">
-                      <input
-                        id="sizes-0"
-                        name="sizes[]"
-                        value="xs"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      />
-                      <label for="sizes-0" class="ml-3 text-sm text-gray-600"
-                        >XS</label
-                      >
-                    </div>
-
-                    <div class="flex items-center">
-                      <input
-                        id="sizes-1"
-                        name="sizes[]"
-                        value="s"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      />
-                      <label for="sizes-1" class="ml-3 text-sm text-gray-600"
-                        >S</label
-                      >
-                    </div>
-
-                    <div class="flex items-center">
-                      <input
-                        id="sizes-2"
-                        name="sizes[]"
-                        value="m"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      />
-                      <label for="sizes-2" class="ml-3 text-sm text-gray-600"
-                        >M</label
-                      >
-                    </div>
-
-                    <div class="flex items-center">
-                      <input
-                        id="sizes-3"
-                        name="sizes[]"
-                        value="l"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      />
-                      <label for="sizes-3" class="ml-3 text-sm text-gray-600"
-                        >L</label
-                      >
-                    </div>
-
-                    <div class="flex items-center">
-                      <input
-                        id="sizes-4"
-                        name="sizes[]"
-                        value="xl"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      />
-                      <label for="sizes-4" class="ml-3 text-sm text-gray-600"
-                        >XL</label
-                      >
-                    </div>
-
-                    <div class="flex items-center">
-                      <input
-                        id="sizes-5"
-                        name="sizes[]"
-                        value="2xl"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      />
-                      <label for="sizes-5" class="ml-3 text-sm text-gray-600"
-                        >2XL</label
-                      >
-                    </div>
+                    <% if (sizes.length) {%> <% for (size of sizes) { %> <%-
+                    include('../component/checkbox.ejs', {label: size.label, id:
+                    size.id, value: size.value}) %> <% } %> <% } %>
                   </div>
                 </fieldset>
               </div>

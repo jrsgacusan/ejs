@@ -13,6 +13,7 @@ app.set('layout', './layouts/master')
 app.get('/products', (req, res) => {
   const viewsData = {
     items: items,
+    sizes: sizes,
   }
   res.render('pages/products', viewsData)
 })
@@ -24,6 +25,7 @@ app.listen(3000, () => {
 const browserSync = require('browser-sync').create()
 const bsConfig = require('./bs-config.js')
 const { items } = require('./constants/items.js')
+const { sizes } = require('./constants/sizes.js')
 browserSync.init(bsConfig)
 app.use(require('connect-browser-sync')(browserSync))
 
