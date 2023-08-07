@@ -24,7 +24,6 @@ app.listen(3000, () => {
 const browserSync = require('browser-sync').create()
 const bsConfig = require('./bs-config.js')
 const { items } = require('./constants/items.js')
-const expressEjsLayouts = require('express-ejs-layouts')
 browserSync.init(bsConfig)
 app.use(require('connect-browser-sync')(browserSync))
 
