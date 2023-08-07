@@ -1,7 +1,0 @@
-<div class="flex gap-4 flex-wrap">
-  <% if (items.length) {%> <% for (item of items) { %>
-  <div><%- include('../partials/card', {imageRef: item.imageRef, title: item.title, subtitle: item.subtitle}) %></div>
-  <% } %> <% } %>
-</div>
-<%- include('../partials/menu-item', {title: 'test', icon: include('../../icons/home.ejs')}) %> <%-
-include('../partials/menu-item', {title: 'test', icon: include('../../icons/heart.ejs')}) %>

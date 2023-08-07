@@ -9,15 +9,12 @@ app.use(require('express-ejs-layouts'))
 
 app.set('layout', './layouts/master')
 
-app.get('/', (req, res) => {
+// Products page
+app.get('/products', (req, res) => {
   const viewsData = {
     items: items,
   }
-  res.render('pages/index', viewsData)
-})
-
-app.get('/test', (req, res) => {
-  res.render('pages/test')
+  res.render('pages/products', viewsData)
 })
 
 app.listen(3000, () => {
