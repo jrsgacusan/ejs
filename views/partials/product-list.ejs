@@ -671,9 +671,10 @@
             class="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:gap-x-8 xl:grid-cols-3"
           >
             <% if (items.length) {%> <% for (item of items) { %> <%-
-            include('../component/product-item.ejs', {imageRef: item.imageRef,
-            title: item.title, description: item.description, colors:
-            item.colors, price: item.price}) %> <% } %> <% } %>
+            include('../component/product-item.ejs', {imageRefSecondary:
+            item.imageRefSecondary, id: item.id, imageRef: item.imageRef, title:
+            item.title, description: item.description, colors: item.colors,
+            price: item.price}) %> <% } %> <% } %>
             <!-- More products... -->
           </div>
         </section>
